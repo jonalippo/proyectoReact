@@ -1,0 +1,52 @@
+.navbarStyled{
+    height: 60px;
+    width: 100%;
+    background-color: rgb(203, 203, 250);
+    align-items: center;
+}
+
+.boxTitle{
+    margin: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.containerButtons{
+    display: flex;
+    align-items: end;
+    margin-top: 0.8em;
+    gap: 0.5em;
+}
+
+.buttonCategory{
+    background-color: white;
+    width: 100px;
+    height: 30px !important;
+}
+
+.boxCarrito{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.BoxNumCarrito{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.boxGreeting{
+    height: 300px;
+    border: solid darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    font-size: 30px;
+    font-weight: 400;
+}
