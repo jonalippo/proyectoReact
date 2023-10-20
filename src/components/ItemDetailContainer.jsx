@@ -1,13 +1,16 @@
-import React from 'react'
-import ItemList from './ItemList';
-import { Box } from '@chakra-ui/react';
+//Tiene un hijo llamado ItemDetail
+//El ItemDetail tiene: img, nombre del producto, descripcion, precio y el componente contador con
+//el boton de sumar, cantidad y restar
+
+import React from "react";
+import ItemDetail from "./ItemDetail";
+import { Box } from "@chakra-ui/react";
 import "./Styles.css";
 
-const ItemListContainer = ()  => {
+const ItemDetailContainer = () => {
 
-     //Mock de productos
-  const productos = [
-    {
+    const productos = [
+        {
       id: "1",
       name: "Café en grano",
       description: "Descripcion del producto",
@@ -87,34 +90,34 @@ const ItemListContainer = ()  => {
         stock: 7,
         category:"Maquinas",
       },
-  ];
-
-  //New promesa para mostrar los productos en 3 segundos por consola
-  const mostrarProductos = new Promise((resolve, reject) => {
-    if (productos.length > 0) {
-      setTimeout(() => {
-        resolve(productos);
-      }, 2000);
-    } else {
-      reject("No se encontrsaron productos");
-    }
-  });
-
-  mostrarProductos
-    .then((resultado) => {
-      console.log(resultado);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
-    return(
+      ];
+    
+      //New promesa para mostrar los productos en 3 segundos por consola
+      const mostrarProductos = new Promise((resolve, reject) => {
+        if (productos.length > 0) {
+          setTimeout(() => {
+            resolve(productos);
+          }, 2000);
+        } else {
+          reject("No se encontrsaron productos");
+        }
+      });
+    
+      mostrarProductos
+        .then((resultado) => {
+          console.log(resultado);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    
+    return (
         <>
-        <Box className= "boxItemListContainer">
-          <ItemList productos={productos} />
+        <Box className= "boxItemDetailContainer">
+            <ItemDetail productos = {productos}/>
         </Box>
-            
         </>
     )
- }
-  export default ItemListContainer;
+}
+
+export default ItemDetailContainer;

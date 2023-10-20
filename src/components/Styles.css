@@ -1,28 +1,39 @@
 .navbarStyled{
-    height: 60px;
+    height:100px;
     width: 100%;
-    background-color: rgb(203, 203, 250);
-    align-items: center;
+    background-color: rgb(194, 163, 97);
+    align-items:center;
+    border-bottom: solid 5px #422c02 ;
 }
 
-.boxTitle{
-    margin: 1em;
-    text-transform: uppercase;
-    font-weight: 600;
-    cursor: pointer;
+.boxImg{
+    width: 200px;
+    height: 100%;
+}
+
+.ImgLogo{
+    width:70%;
+    height:80%;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .containerButtons{
     display: flex;
-    align-items: end;
-    margin-top: 0.8em;
-    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 2.5em;
 }
 
 .buttonCategory{
-    background-color: white;
-    width: 100px;
-    height: 30px !important;
+    width: 120px;
+    height: 25px !important;
+    border-bottom: solid white;
+    background-color: transparent !important;
+    &:hover{
+        border-bottom: solid #422c02;
+    }
 }
 
 .boxCarrito{
@@ -40,13 +51,71 @@
     justify-content: center;
 }
 
-.boxGreeting{
-    height: 300px;
-    border: solid darkblue;
+.boxItemListContainer{
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 1em;
-    font-size: 30px;
-    font-weight: 400;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 2em;
+    background-image: url("../../public/fondo1.1.jpg");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    flex-wrap: wrap;
+}
+
+.boxItemDetailContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height:100%;
+    gap: 2em;
+    background-image: url("../../public/fondo2.jpg");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em;
+    flex-wrap: wrap;
+}
+
+.styledCard{
+    width: 240px;
+    height:380px;
+    display: flex;
+    align-items: center;
+    border: solid transparent !important;
+    background-color: rgb(194, 163, 97) !important;
+    &:hover{
+        background-color: #fcdda5 !important;
+    }
+}
+
+.styledCardDetail{
+    width: 400px;
+    height:480px;
+    display: flex;
+    align-items: center;
+    border: solid transparent !important;
+    background-color: rgb(194, 163, 97) !important;
+}
+
+.containerImg{
+    border:solid white;
+    width: 220px;
+    height: 200px;
+}
+.containerImgDetail{
+    border:solid white;
+    width: 350px;
+    height: 200px;
+}
+
+.textCategory{
+    font-size: 18px;
+    font-weight: 600;
 }

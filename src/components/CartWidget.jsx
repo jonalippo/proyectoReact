@@ -8,8 +8,8 @@ const CartWidget = () => {
         <Box className="boxCarrito">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
+        width="40"
+        height="40"
         fill="currentColor"
         class="bi bi-cart"
         viewBox="0 0 16 16"
@@ -20,7 +20,7 @@ const CartWidget = () => {
 
       <Spacer />
       <Box className="BoxNumCarrito">
-        <Badge backgroundColor={"transparent"} fontSize={"14px"}>4</Badge>
+        <Badge backgroundColor={"transparent"} fontSize={"18px"}>2</Badge>
       </Box>
 
       

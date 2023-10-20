@@ -5,7 +5,6 @@ import {
   MenuList,
   MenuItem,
   MenuGroup,
-  MenuDivider,
   IconButton,
   Flex,
   Box,
@@ -13,57 +12,80 @@ import {
 } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
 import "./Styles.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <Flex className="navbarStyled">
-      <Box className="boxTitle">
-        <h1>Futuro E-commers</h1>
+      <Box className="boxImg">
+        <Link to={"/home"}>
+          <img
+            src="../../public/houseCoffee1.png"
+            alt="coffee"
+            className="ImgLogo"
+          />
+        </Link>
       </Box>
       <Spacer />
 
       <Box className="containerButtons">
-      <Box>
-        <Menu>
-          <MenuButton as={IconButton} className="buttonCategory">
-            Prendas
-          </MenuButton>
-          <MenuList>
-            <MenuGroup title="Pantalones" fontWeight={"800"}>
-              <MenuItem>Largos</MenuItem>
-              <MenuItem>Cortos</MenuItem>
-            </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Remeras" fontWeight={"800"}>
-              <MenuItem>Manga larga</MenuItem>
-              <MenuItem>Manga corta</MenuItem>
-            </MenuGroup>
-          </MenuList>
-        </Menu>
-      </Box>
-      <Spacer />
+        <Box>
+          <Link to={"/"}>
+            <Menu>
+              <MenuButton className="buttonCategory" background="transparent !" as={IconButton} >
+                Inicio
+              </MenuButton>
+            </Menu>
+          </Link>
+        </Box>
 
-      <Spacer />
-      <Box>
-        <Menu>
-          <MenuButton as={IconButton} className="buttonCategory">
-            {" "}
-            Calzados
-          </MenuButton>
-          <MenuList>
-            <MenuGroup title="Zapatillas" fontWeight={"800"}>
-              <MenuItem>Deportivas</MenuItem>
-              <MenuItem>Urbanas</MenuItem>
-            </MenuGroup>
-            <MenuDivider />
-            <MenuGroup title="Zapatos" fontWeight={"800"}>
-              <MenuItem>Cuero</MenuItem>
-              <MenuItem>Gamuza</MenuItem>
-            </MenuGroup>
-          </MenuList>
-        </Menu>
+        <Box>
+          <Menu>
+            <MenuButton as={IconButton} className="buttonCategory">
+              Café
+            </MenuButton>
+            <MenuList>
+              <MenuGroup>
+                <MenuItem>Café en grano</MenuItem>
+                <MenuItem>Café molido</MenuItem>
+                <MenuItem>Café en cápsulas</MenuItem>
+              </MenuGroup>
+            </MenuList>
+          </Menu>
+        </Box>
+
+        <Box>
+          <Menu>
+            <MenuButton as={IconButton} className="buttonCategory">
+              Infusiones
+            </MenuButton>
+            <MenuList>
+              <MenuGroup>
+                <MenuItem>Té en Hebras</MenuItem>
+                <MenuItem>Té en saquitos</MenuItem>
+              </MenuGroup>
+            </MenuList>
+          </Menu>
+        </Box>
+
+        <Box>
+          <Menu>
+            <MenuButton as={IconButton} className="buttonCategory">
+              Maquinas
+            </MenuButton>
+            <MenuList>
+              <MenuGroup>
+                <MenuItem>Maquinas de cápsulas</MenuItem>
+                <MenuItem>Espresso</MenuItem>
+                <MenuItem>Cafeteras Italianas</MenuItem>
+                <MenuItem>Molinos</MenuItem>
+                <MenuItem>Con filtro</MenuItem>
+              </MenuGroup>
+            </MenuList>
+          </Menu>
+        </Box>
       </Box>
-      </Box>
+
       <Spacer />
 
       <Box marginRight={"1em"}>
