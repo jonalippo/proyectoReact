@@ -26,13 +26,16 @@ const NavBar = () => {
           />
         </Link>
       </Box>
-      <Spacer />
 
       <Box className="containerButtons">
         <Box>
           <Link to={"/"}>
             <Menu>
-              <MenuButton className="buttonCategory" background="transparent !" as={IconButton} >
+              <MenuButton
+                className="buttonCategory"
+                background="transparent !"
+                as={IconButton}
+              >
                 Inicio
               </MenuButton>
             </Menu>
@@ -45,11 +48,15 @@ const NavBar = () => {
               Café
             </MenuButton>
             <MenuList>
-              <MenuGroup>
-                <MenuItem>Café en grano</MenuItem>
-                <MenuItem>Café molido</MenuItem>
-                <MenuItem>Café en cápsulas</MenuItem>
-              </MenuGroup>
+              <MenuItem>
+                <Link to={`/category/${"cafeMolido"}`}>Molido</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={`/category/${"cafeGranos"}`}>En Granos</Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={`/category/${"cafeCapsulas"}`}>En Cápsulas</Link>
+              </MenuItem>
             </MenuList>
           </Menu>
         </Box>
@@ -60,10 +67,16 @@ const NavBar = () => {
               Infusiones
             </MenuButton>
             <MenuList>
-              <MenuGroup>
-                <MenuItem>Té en Hebras</MenuItem>
-                <MenuItem>Té en saquitos</MenuItem>
-              </MenuGroup>
+              <MenuItem>
+                <Link to={`/category/${"infusionesHebras"}`}>
+                  En hebras
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to={`/category/${"infusionesSaquitos"}`}>
+                  En saquitos
+                </Link>
+              </MenuItem>
             </MenuList>
           </Menu>
         </Box>
@@ -74,19 +87,11 @@ const NavBar = () => {
               Maquinas
             </MenuButton>
             <MenuList>
-              <MenuGroup>
-                <MenuItem>Maquinas de cápsulas</MenuItem>
-                <MenuItem>Espresso</MenuItem>
-                <MenuItem>Cafeteras Italianas</MenuItem>
-                <MenuItem>Molinos</MenuItem>
-                <MenuItem>Con filtro</MenuItem>
-              </MenuGroup>
+              <Link to={`/category/${"maquinas"}`}>Cafeteras</Link>
             </MenuList>
           </Menu>
         </Box>
       </Box>
-
-      <Spacer />
 
       <Box marginRight={"1em"}>
         <CartWidget />

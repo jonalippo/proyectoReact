@@ -17,7 +17,7 @@ import "./Styles.css";
 const ItemDetail = ({ productos }) => {
   const { id } = useParams();
 
-  const filteredProduct = productos.filter((producto) => producto.id == id);
+  const filteredProduct = productos.filter((producto) => producto.id === id);
 
   return (
     <>
@@ -30,8 +30,6 @@ const ItemDetail = ({ productos }) => {
                 <Heading size="md">{p.name}</Heading>
               </Stack>
             </CardBody>
-            
-            <Text className="textCategory">Categoria: {p.category}</Text>
             <Text fontSize="18px">{p.description}</Text>
             <Text fontSize="22px" fontWeight="700" color="brown" padding="1em">{p.price}</Text>
             <Divider />

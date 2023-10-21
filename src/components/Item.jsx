@@ -18,7 +18,7 @@ const Item = ({ name, id}) => {
       <Card className="styledCard" boxShadow='dark-lg'>
         <CardBody padding="0">
           <Stack mt="6" spacing="3">
-            <Box className="containerImg">Imagen</Box>
+            <Box className="containerImg">Img</Box>
             <Heading size="md" textAlign="center">{name}</Heading>
           </Stack>
         </CardBody>

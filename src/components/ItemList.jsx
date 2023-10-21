@@ -11,7 +11,6 @@ const ItemList = ({ productos }) => {
             name={p.name}
             description={p.description}
             price={p.price}   
-            categoty={p.category}     
         />;
       })}
     </>

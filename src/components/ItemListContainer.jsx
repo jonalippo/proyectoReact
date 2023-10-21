@@ -2,90 +2,124 @@ import React from 'react'
 import ItemList from './ItemList';
 import { Box } from '@chakra-ui/react';
 import "./Styles.css";
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ()  => {
-
+  
+const {category} =useParams()
      //Mock de productos
   const productos = [
     {
       id: "1",
       name: "Café en grano",
       description: "Descripcion del producto",
-      price: "$100",
+      price: "$1000",
       stock: 3,
-      category: "Café",
+      category: "cafeGranos",
     },
     {
       id: "2",
       name: "Café molido",
       description: "Descripcion del producto",
-      price: "$800",
+      price: "$500",
       stock: 4,
-      category: "Café",
+      category: "cafeMolido",
     },
     {
       id: "3",
-      name: "Café en cápsulas",
+      name: "Café molido",
       description: "Descripcion del producto",
-      price: "$600",
-      stock: 6,
-      category: "Café",
+      price: "$400",
+      stock: 4,
+      category: "cafeMolido",
     },
     {
       id: "4",
-      name: "Té en hebras",
+      name: "Café en cápsulas",
       description: "Descripcion del producto",
-      price: "$500",
-      stock: 7,
-      category: "Infusiones",
+      price: "$800",
+      stock: 6,
+      category: "cafeCapsulas",
     },
     {
       id: "5",
-      name: "Té en saquitos",
+      name: "Café en cápsulas",
       description: "Descripcion del producto",
-      price: "$150",
-      stock: 3,
-      category: "Infusiones",
+      price: "$850",
+      stock: 6,
+      category: "cafeCapsulas",
     },
     {
       id: "6",
-      name: "Maquinas de cápsulas",
+      name: "Té en hebras",
       description: "Descripcion del producto",
-      price: "$1000",
-      stock: 4,
-      category:"Maquinas",
+      price: "$700",
+      stock: 7,
+      category: "infusionesHebras",
     },
     {
       id: "7",
+      name: "Té en hebras",
+      description: "Descripcion del producto",
+      price: "$800",
+      stock: 3,
+      category: "infusionesHebras",
+    },
+    {
+      id: "8",
+      name: "Té en saquitos",
+      description: "Descripcion del producto",
+      price: "$500",
+      stock: 7,
+      category: "infusionesSaquitos",
+    },
+    {
+      id: "9",
+      name: "Té en saquitos",
+      description: "Descripcion del producto",
+      price: "$550",
+      stock: 3,
+      category: "infusionesSaquitos",
+    },
+    {
+      id: "10",
+      name: "Maquinas de cápsulas",
+      description: "Descripcion del producto",
+      price: "$10000",
+      stock: 4,
+      category:"maquinas",
+    },
+    {
+      id: "11",
       name: "Espresso",
       description: "Descripcion del producto",
       price: "$6180",
       stock: 15,
-      category:"Maquinas",
+      category:"maquinas",
     },
     {
-      id: "8",
+      id: "12",
       name: "Cafeteras italianas",
       description: "Descripcion del producto",
       price: "$5000",
       stock: 7,
-      category:"Maquinas",
+      category:"maquinas",
     },
     {
-      id: "9",
+      id: "13",
       name: "Molinos",
       description: "Descripcion del producto",
       price: "$2000",
       stock: 7,
-      category:"Maquinas",
+      category:"maquinas",
     },
     {
-        id: "10",
+        id: "14",
         name: "Con filtro",
         description: "Descripcion del producto",
-        price: "$2000",
+        price: "$1200",
         stock: 7,
-        category:"Maquinas",
+        category:"maquinas",
       },
   ];
 
@@ -96,7 +130,7 @@ const ItemListContainer = ()  => {
         resolve(productos);
       }, 2000);
     } else {
-      reject("No se encontrsaron productos");
+      reject("No se encontraron productos");
     }
   });
 
@@ -108,10 +142,13 @@ const ItemListContainer = ()  => {
       console.log(error);
     });
 
+    const filteredProduct = productos.filter((producto) => producto.category === category);
+
+    
     return(
         <>
         <Box className= "boxItemListContainer">
-          <ItemList productos={productos} />
+          <ItemList productos={filteredProduct} />
         </Box>
             
         </>

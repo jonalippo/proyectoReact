@@ -20,7 +20,7 @@ const CartWidget = () => {
 
       <Spacer />
       <Box className="BoxNumCarrito">
-        <Badge backgroundColor={"transparent"} fontSize={"18px"}>2</Badge>
+        <Badge backgroundColor={"transparent"} fontSize={"18px"} color={"white"}>2</Badge>
       </Box>
 
       

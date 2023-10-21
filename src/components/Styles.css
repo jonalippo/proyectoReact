@@ -1,9 +1,16 @@
+.imgHome{
+    width: 100%;
+   height: 520px
+}
+
 .navbarStyled{
-    height:100px;
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+    height:110px;
     width: 100%;
     background-color: rgb(194, 163, 97);
-    align-items:center;
-    border-bottom: solid 5px #422c02 ;
+    border-bottom: solid 6px white;
 }
 
 .boxImg{
@@ -22,7 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-bottom: 0.5em;
     gap: 2.5em;
 }
 
@@ -37,48 +44,28 @@
 }
 
 .boxCarrito{
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
+    margin-left: 2em;
+    margin-bottom: 1em;
 }
 
 .BoxNumCarrito{
     display: flex;
     align-items: start;
     justify-content: center;
+    margin-left: 0.2em;
+    margin-top: 1.1em;
 }
 
 .boxItemListContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     gap: 2em;
     background-image: url("../../public/fondo1.1.jpg");
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2em;
-    flex-wrap: wrap;
-}
-
-.boxItemDetailContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height:100%;
-    gap: 2em;
-    background-image: url("../../public/fondo2.jpg");
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position:start;
+    background-size:cover;
     padding: 2em;
     flex-wrap: wrap;
 }
@@ -95,27 +82,39 @@
     }
 }
 
-.styledCardDetail{
-    width: 400px;
-    height:480px;
-    display: flex;
-    align-items: center;
-    border: solid transparent !important;
-    background-color: rgb(194, 163, 97) !important;
-}
-
 .containerImg{
     border:solid white;
     width: 220px;
     height: 200px;
 }
+
+.boxItemDetailContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../../public/fondo2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.styledCardDetail{
+    width: 400px;
+    height:450px;
+    display: flex;
+    align-items: center;
+    border: solid transparent !important;
+    margin-top: 2em;
+    background-color: rgb(194, 163, 97) !important;
+}
+
 .containerImgDetail{
     border:solid white;
     width: 350px;
     height: 200px;
 }
 
-.textCategory{
-    font-size: 18px;
-    font-weight: 600;
-}
+
+
+
+
