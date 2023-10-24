@@ -3,7 +3,6 @@ import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import Home from "./components/Home";
 
 const App = () => {
@@ -11,18 +10,12 @@ const App = () => {
     <BrowserRouter>
       <NavBar />
       <Routes>
-             
-        
         <Route exact path="/" element={<ItemListContainer />}/>
         <Route exact path="/home" element={<Home/>}/>
         <Route exact path="/product/:id" element={<ItemDetailContainer />}/>
         <Route exact path="/category/:category" element={<ItemListContainer />} />
-
-        
       </Routes>
-     
-
-      {/* <Footer></Footer> */}
+     {/* <Footer /> */}
     </BrowserRouter>
   );
 };

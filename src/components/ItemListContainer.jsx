@@ -1,4 +1,3 @@
-import React from 'react'
 import ItemList from './ItemList';
 import { Box } from '@chakra-ui/react';
 import "./Styles.css";
@@ -7,6 +6,7 @@ import { useParams } from 'react-router-dom';
 const ItemListContainer = ()  => {
   
 const {category} =useParams()
+
      //Mock de productos
   const productos = [
     {
@@ -123,7 +123,7 @@ const {category} =useParams()
       },
   ];
 
-  //New promesa para mostrar los productos en 3 segundos por consola
+  //New promesa para mostrar los productos en 2 segundos por consola
   const mostrarProductos = new Promise((resolve, reject) => {
     if (productos.length > 0) {
       setTimeout(() => {
@@ -148,7 +148,7 @@ const {category} =useParams()
     return(
         <>
         <Box className= "boxItemListContainer">
-          <ItemList productos={filteredProduct} />
+          {category ? <ItemList productos={filteredProduct} /> : <ItemList productos={productos} />}
         </Box>
             
         </>
