@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Badge, Box, Flex, Spacer } from "@chakra-ui/react";
 import './Styles.css';
+import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
+  const {totalQuantity} = useContext(CartContext)
+
   return (
     <Flex>
         <Box className="boxCarrito">
@@ -20,10 +23,8 @@ const CartWidget = () => {
 
       <Spacer />
       <Box className="BoxNumCarrito">
-        <Badge backgroundColor={"transparent"} fontSize={"18px"} color={"white"}>2</Badge>
+        <Badge backgroundColor={"transparent"} fontSize={"18px"} color={"white"}>{totalQuantity}</Badge>
       </Box>
-
-      
     </Flex>
   );
 };

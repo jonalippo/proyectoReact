@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import {
     Card,
     CardBody,
@@ -19,6 +19,13 @@ const ItemDetail = ({ productos }) => {
 
   const filteredProduct = productos.filter((producto) => producto.id === id);
 
+  const [quantityAdded, setQuantityAdded] = useState(0)
+
+  const handleOnAdd = (quantity) =>{
+    setQuantityAdded(quantity)
+}
+
+
   return (
     <>
       {filteredProduct.map((p) => {
@@ -35,14 +42,20 @@ const ItemDetail = ({ productos }) => {
             <Divider />
             <CardFooter>
               <ButtonGroup className="styledButtonGroup">
-                <ItemCount />
+                {
+                  quantityAdded > 0 ?(
+                    <Link to='/cart' >Terminar compra</Link>
+                  ) : (
+                    <ItemCount initial={1} onAdd={handleOnAdd}/>
+                  )
+                }
+                
               </ButtonGroup>
             </CardFooter>
           </Card>
         );
       })}
-    </>
-  );
-};
+    </>  
+    )}
 
 export default ItemDetail;

@@ -137,10 +137,10 @@ const ItemDetailContainer = () => {
     
       mostrarProductos
         .then((resultado) => {
-          console.log(resultado);
+          resultado
         })
         .catch((error) => {
-          console.log(error);
+        error
         });
     
     return (
