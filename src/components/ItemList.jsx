@@ -1,6 +1,5 @@
 import Item from "./Item";
 
-//Agregar el boton descripion para redireccionar al componente IntemDetail
 const ItemList = ({ productos }) => {
   return (
     <>

@@ -24,7 +24,7 @@ const Item = ({name, id }) => {
         </CardBody>
         <CardFooter>
           <ButtonGroup spacing="2">
-            <Button variant="solid" background='#422c02' color='white'>
+            <Button variant="solid" className="buttonDetalle">
               <Link to={`/product/${id}`}>
               Ver detalle
               </Link>

@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./components/Cart";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -26,11 +28,11 @@ const App = () => {
               path="/category/:category"
               element={<ItemListContainer />}
             />
-            <Route path="/cart" element={<Cart/>}/>
+             <Route exact path='/cart' element={<Cart />} />
+             <Route exact path='/form' element={<Form />} />
           </Routes>
-        </CartContextProvider>
-        
-        {/* <Footer /> */}
+          <Footer />
+        </CartContextProvider>        
       </BrowserRouter>
     </>
   );
