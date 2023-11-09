@@ -16,24 +16,20 @@ import "./Styles.css";
 const ItemDetail = ({ productos }) => {
   const { id } = useParams();
 
-  const filteredProduct = productos.filter((producto) => producto.id === id);
-
   const handleOnAdd = () => {};
 
   return (
     <>
-      {filteredProduct.map((p) => {
-        return (
           <Card className="styledCardDetail" boxShadow="dark-lg">
             <CardBody>
               <Stack mt="2" spacing="1" textAlign="center">
-                <Box className="containerImgDetail">Imagen</Box>
-                <Heading size="md">{p.name}</Heading>
+                <Box className="containerImgDetail">imagen</Box>
+                <Heading size="md">{productos.name}</Heading>
               </Stack>
             </CardBody>
-            <Text fontSize="18px">{p.description}</Text>
+            <Text fontSize="18px">{productos.description}</Text>
             <Text fontSize="22px" fontWeight="700" color="brown" padding="1em">
-              ${p.price}
+              ${productos.price}
             </Text>
             <Divider />
             <CardFooter>
@@ -42,8 +38,6 @@ const ItemDetail = ({ productos }) => {
               </ButtonGroup>
             </CardFooter>
           </Card>
-        );
-      })}
     </>
   );
 };
