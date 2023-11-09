@@ -19,8 +19,8 @@ const Footer = () => {
         <ul>
           <li className="contactos"> <PhoneIcon className="iconsFooter"/>Telefono: 2494623456</li>
           <li className="contactos"> <EmailIcon className="iconsFooter"/>Email: housecoffee@gmail.com</li>
-          <li className="contactos"> <img src="public/instagram.png" width="20px" className="iconsFooter" alt="instagram" />Instagram: House Coffe Tandil</li>
-          <li className="contactos"> <img src="public/ubicacion.png" width="20px" className="iconsFooter" alt="instagram" />Ubicación: Tandil</li>
+          <li className="contactos"> <img src="/public/instagram.png" width="20px" className="iconsFooter" alt="instagram" />Instagram: House Coffe Tandil</li>
+          <li className="contactos"> <img src="/public/ubicacion.png" width="20px" className="iconsFooter" alt="ubiacion" />Ubicación: Tandil</li>
         </ul>
       </div>
     </div>
