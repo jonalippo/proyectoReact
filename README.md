@@ -31,6 +31,7 @@ Este proyecto fue construido completamente con:
 ### GIF CORRESPONDIENTE A LA ENTREGA FINAL
 <br/>
 El video desmostrativo fue dividido en dos partes por que superaba los 10MB permitidos por GitHub
+<br/>
 PRIMERA PARTE
 https://github.com/jonalippo/proyectoReact/assets/120411150/b013d93c-f664-4a7f-b04b-01cbd318c2df
 
