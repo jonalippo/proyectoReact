@@ -30,6 +30,11 @@ Este proyecto fue construido completamente con:
 
 ### GIF CORRESPONDIENTE A LA ENTREGA FINAL
 <br/>
+PRIMERA PARTE
+https://github.com/jonalippo/proyectoReact/assets/120411150/b013d93c-f664-4a7f-b04b-01cbd318c2df
+
+SEGUNDA PARTE
+https://github.com/jonalippo/proyectoReact/assets/120411150/1d6d9d06-79d8-4d2c-96ec-7a4ba682db57
 
 ## Autores del proyecto.
 Lippo Jonatan Cristian
