@@ -18,7 +18,7 @@ Este proyecto fue construido completamente con:
 - Firease (Base de datos No relacional alojada en la nube que te permite almacenar y sincronizar datos entre con los usuarios en tiempo real)
 
 ## Instalación.
-- Clonar este proyecto.
+- Clonar este proyecto: https://github.com/jonalippo/proyectoReact.git
 - Instalar dependencias con el comando npm install
 - Intalar Chacra UI, con el comando npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
 - Para renderizar el proyecto en el servidor local, usamos el comando npm run dev
