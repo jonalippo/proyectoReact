@@ -1,16 +1,11 @@
 import { Box, Button } from "@chakra-ui/react";
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-import { useParams } from "react-router-dom";
 
-const ItemCount = ({ productos }) => {
+const ItemCount = ({ producto }) => {
   const [quantity, setQuantity] = useState(0);
 
   const { addItem } = useContext(CartContext);
-
-  const { id } = useParams();
-
-  const filteredProduct = productos.filter((producto) => producto.id === id);
 
   const suma = () => {
     quantity < 10 ? setQuantity(quantity + 1) : alert("No hay stock");
@@ -20,7 +15,8 @@ const ItemCount = ({ productos }) => {
   };
 
   const addItemAux = () => {
-    addItem(filteredProduct[0], quantity);
+    addItem(producto, quantity);
+    alert("Producto agregado al carrito");
   };
 
   return (

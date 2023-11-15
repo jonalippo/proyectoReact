@@ -4,30 +4,32 @@ import ItemDetail from "./ItemDetail";
 import { Box } from "@chakra-ui/react";
 import "./Styles.css";
 import { useParams } from "react-router-dom";
+import Loader from "./Loader";
 
 const ItemDetailContainer = () => {
+  const { id } = useParams();
 
-const { id } = useParams()
-const [producto, setProducto] = useState([])
+  const [producto, setProducto] = useState();
 
-useEffect(() => {
-  const db = getFirestore()
-  const oneItem = doc(db, "productos", `${id}`)
+  useEffect(() => {
+    const db = getFirestore();
+    const oneItem = doc(db, "productos", `${id}`);
 
-  getDoc(oneItem).then((response) => {
-    const docs = snapshot.docs.map((doc) => doc.data())
-    setProducto(response.docs((doc) => ({ id: doc.id, ...doc.data() })));
+    getDoc(oneItem).then((snapshot) => {
+      if (snapshot.exists()) {
+        const docs = snapshot.data();
+        setProducto({ id, ...docs });
+      }
+    });
+  }, []);
 
-  })
-},[])
-
-    return (
-        <>
-        <Box className= "boxItemDetailContainer">
-            <ItemDetail productos = {producto}/>
-        </Box>
-        </>
-    )
-}
+  return (
+    <>
+      <Box className="boxItemDetailContainer">
+        {producto ? <ItemDetail producto={producto} /> : <Loader />}
+      </Box>
+    </>
+  );
+};
 
 export default ItemDetailContainer;

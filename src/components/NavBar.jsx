@@ -18,7 +18,7 @@ const NavBar = () => {
       <Box className="boxImg">
         <Link to={"/home"}>
           <img
-            src="../../public/houseCoffee1.png"
+            src="../../public/logoBlanco.png"
             alt="coffee"
             className="ImgLogo"
           />
@@ -46,13 +46,13 @@ const NavBar = () => {
               Café
             </MenuButton>
             <MenuList>
-              <MenuItem>
+              <MenuItem color="rgb(26, 19, 2)">
                 <Link to={`/category/${"cafeMolido"}`}>Molido</Link>
               </MenuItem>
-              <MenuItem>
+              <MenuItem color="rgb(26, 19, 2)">
                 <Link to={`/category/${"cafeGranos"}`}>En Granos</Link>
               </MenuItem>
-              <MenuItem>
+              <MenuItem color="rgb(26, 19, 2)">
                 <Link to={`/category/${"cafeCapsulas"}`}>En Cápsulas</Link>
               </MenuItem>
             </MenuList>
@@ -65,12 +65,10 @@ const NavBar = () => {
               Infusiones
             </MenuButton>
             <MenuList>
-              <MenuItem>
-                <Link to={`/category/${"infusionesHebras"}`}>
-                  En hebras
-                </Link>
+              <MenuItem color="rgb(26, 19, 2)">
+                <Link to={`/category/${"infusionesHebras"}`}>En hebras</Link>
               </MenuItem>
-              <MenuItem>
+              <MenuItem color="rgb(26, 19, 2)">
                 <Link to={`/category/${"infusionesSaquitos"}`}>
                   En saquitos
                 </Link>
@@ -81,7 +79,11 @@ const NavBar = () => {
 
         <Box>
           <Menu>
-            <MenuButton as={IconButton} className="buttonCategory">
+            <MenuButton
+              as={IconButton}
+              className="buttonCategory"
+              color="rgb(26, 19, 2)"
+            >
               Maquinas
             </MenuButton>
             <MenuList>

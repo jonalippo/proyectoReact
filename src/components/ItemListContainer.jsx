@@ -1,34 +1,50 @@
-import ItemList from './ItemList';
-import { Box } from '@chakra-ui/react';
+import ItemList from "./ItemList";
+import { Box } from "@chakra-ui/react";
 import "./Styles.css";
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
+import Loader from "./Loader";
 
-const ItemListContainer = ()  => {
+const ItemListContainer = () => {
+  const [productos, setProductos] = useState([]);
+  const { category } = useParams();
+  const [loading, setLoading] = useState(true);
 
-  const [productos, setProductos] = useState([])
-  const {category} =useParams()
-
-  useEffect(() =>{
-    const db = getFirestore()
-    const itemsCollection = collection(db, "productos")
+  useEffect(() => {
+    const db = getFirestore();
+    const itemsCollection = collection(db, "productos");
 
     getDocs(itemsCollection).then((response) => {
       // const docs = snapshot.docs.map((doc) => doc.data())
-      setProductos(response.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-    })
-  },[])
-  
-  const filteredProduct = productos.filter((producto) => producto.category === category);
+      setTimeout(() => {
+        setLoading(false);
+        setProductos(
+          response.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        );
+      }, 1);
+    });
+  }, []);
 
-    return(
-        <>
-        <Box className= "boxItemListContainer">
-          {category ? <ItemList productos={filteredProduct} /> : <ItemList productos={productos} />}
-        </Box>
-            
-        </>
-    )
+  const filteredProduct = productos.filter(
+    (producto) => producto.category === category
+  );
+
+  if (loading) {
+    return <Loader />;
   }
-  export default ItemListContainer;
+
+  return (
+    <>
+      <h1 className="titleProductos">Nuestros productos</h1>
+      <Box className="boxItemListContainer">
+        {category ? (
+          <ItemList productos={filteredProduct} />
+        ) : (
+          <ItemList productos={productos} />
+        )}
+      </Box>
+    </>
+  );
+};
+export default ItemListContainer;

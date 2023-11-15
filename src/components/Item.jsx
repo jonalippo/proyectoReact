@@ -7,27 +7,27 @@ import {
   CardFooter,
   ButtonGroup,
   Button,
-  Box,
+  Image,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import "./Styles.css";
 
-const Item = ({name, id }) => {
+const Item = ({ imagen, name, id }) => {
   return (
     <>
-      <Card className="styledCard" boxShadow='dark-lg'>
+      <Card className="styledCard" boxShadow="dark-lg">
         <CardBody padding="0">
           <Stack mt="6" spacing="3">
-            <Box className="containerImg" >Imagen</Box>
-            <Heading size="md" textAlign="center">{name}</Heading>
+            <Image className="containerImg" src={imagen}></Image>
+            <Heading size="md" textAlign="center" color="white">
+              {name}
+            </Heading>
           </Stack>
         </CardBody>
         <CardFooter>
           <ButtonGroup spacing="2">
             <Button variant="solid" className="buttonDetalle">
-              <Link to={`/product/${id}`}>
-              Ver detalle
-              </Link>
+              <Link to={`/product/${id}`}>Ver detalle</Link>
             </Button>
           </ButtonGroup>
         </CardFooter>

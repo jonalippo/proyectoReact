@@ -28,11 +28,11 @@ const App = () => {
               path="/category/:category"
               element={<ItemListContainer />}
             />
-             <Route exact path='/cart' element={<Cart />} />
-             <Route exact path='/form' element={<Form />} />
+            <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/form" element={<Form />} />
           </Routes>
           <Footer />
-        </CartContextProvider>        
+        </CartContextProvider>
       </BrowserRouter>
     </>
   );
@@ -40,6 +40,3 @@ const App = () => {
 
 export default App;
 
-//Routes: envuelve todas las rutas
-//Route: es cada una de las rutas
-//Un solo / va directo a home. Exact porq va leer toda la ruta, no solo el "/"

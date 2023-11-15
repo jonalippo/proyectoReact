@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import {
   Card,
   CardBody,
@@ -8,36 +7,36 @@ import {
   Divider,
   CardFooter,
   ButtonGroup,
-  Box,
+  Image,
 } from "@chakra-ui/react";
 import ItemCount from "./ItemCount";
 import "./Styles.css";
 
-const ItemDetail = ({ productos }) => {
-  const { id } = useParams();
-
-  const handleOnAdd = () => {};
-
+const ItemDetail = ({ producto }) => {
   return (
     <>
-          <Card className="styledCardDetail" boxShadow="dark-lg">
-            <CardBody>
-              <Stack mt="2" spacing="1" textAlign="center">
-                <Box className="containerImgDetail">imagen</Box>
-                <Heading size="md">{productos.name}</Heading>
-              </Stack>
-            </CardBody>
-            <Text fontSize="18px">{productos.description}</Text>
-            <Text fontSize="22px" fontWeight="700" color="brown" padding="1em">
-              ${productos.price}
-            </Text>
-            <Divider />
-            <CardFooter>
-              <ButtonGroup className="styledButtonGroup">
-                  <ItemCount productos = {productos} initial={1} onAdd={handleOnAdd} />
-              </ButtonGroup>
-            </CardFooter>
-          </Card>
+      <Card className="styledCardDetail" boxShadow="dark-lg">
+        <CardBody>
+          <Stack mt="2" spacing="1" textAlign="center">
+            <Image className="containerImgDetail" src={producto.imagen}></Image>
+            <Heading size="md" color="white">
+              {producto.name}
+            </Heading>
+          </Stack>
+        </CardBody>
+        <Text fontSize="18px" color="white">
+          {producto.description}
+        </Text>
+        <Text fontSize="22px" fontWeight="700" color="#af7a18" padding="1em">
+          ${producto.price}
+        </Text>
+        <Divider />
+        <CardFooter>
+          <ButtonGroup className="styledButtonGroup">
+            <ItemCount producto={producto} />
+          </ButtonGroup>
+        </CardFooter>
+      </Card>
     </>
   );
 };

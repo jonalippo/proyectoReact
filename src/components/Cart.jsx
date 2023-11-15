@@ -34,7 +34,7 @@ const Cart = () => {
       <div className="boxPagCart">
         <div className="containerGeneral">
           {cart.map((p) => (
-            <div className="containerProducts">
+            <div key={p.id} className="containerProducts">
               <ul className="itemProduct">
                 <li>
                   {" "}
@@ -59,8 +59,8 @@ const Cart = () => {
             <Button onClick={() => clearCart()} className="buttonInf">
               Limpiar carrito
             </Button>
-            <Link to={'/form'}>
-              <Button className="buttonInf">
+            <Link to={"/form"}>
+              <Button onClick={() => clearCart()} className="buttonInf">
                 Terminar compra
               </Button>
             </Link>
@@ -71,5 +71,3 @@ const Cart = () => {
   }
 };
 export default Cart;
-
-//de donde sale quantity  y total, q no estan en cartContext

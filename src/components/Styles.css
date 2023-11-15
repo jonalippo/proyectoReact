@@ -1,315 +1,367 @@
-.imgHome{
-    width: 100%;
-    height: 520px
+.imgHome {
+  width: 100%;
+  height: 520px;
 }
 
-.navbarStyled{
-    display: flex;
-    align-items:end;
-    justify-content: space-between;
-    height:110px;
-    width: 100%;
-    background-color: rgb(194, 163, 97);
-    border-bottom: solid 6px white;
+.navbarStyled {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 160px;
+  width: 100%;
+  background-image: url("../../public/granos.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: solid 6px rgb(26, 19, 2);
 }
 
-.boxImg{
-    width: 200px;
-    height: 100%;
+.boxImg {
+  width: 200px;
+  height: 100%;
 }
 
-.ImgLogo{
-    width:70%;
-    height:80%;
-    margin-top: 10px;
-    margin-left: 20px;
+.ImgLogo {
+  width: 90%;
+  height: 60%;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-.containerButtons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5em;
-    gap: 2.5em;
+.containerButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  gap: 2.5em;
 }
 
-.buttonCategory{
-    width: 120px;
-    height: 25px !important;
-    border-bottom: solid white;
-    background-color: transparent !important;
-    &:hover{
-        border-bottom: solid #422c02;
-    }
+.buttonCategory {
+  width: 120px;
+  height: 25px !important;
+  background-color: transparent !important;
+  color: white !important;
+  font-size: 18px !important;
+  &:hover {
+    border-bottom: solid #e2a83e;
+  }
 }
 
-.boxCarrito{
-    cursor: pointer;
-    margin-left: 2em;
-    margin-bottom: 1em;
+.boxCarrito {
+  cursor: pointer;
+  margin-left: 2em;
+  margin-bottom: 2em;
 }
 
-.BoxNumCarrito{
-    display: flex;
-    align-items: start;
-    justify-content: center;
-    margin-left: 0.2em;
-    margin-top: 1.1em;
+.BoxNumCarrito {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-left: 0.2em;
+  margin-top: 1.1em;
 }
 
-.boxItemListContainer{
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    background-image: url("../../public/fondo1.1.jpg");
-    background-position:center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    padding: 2em;
-    flex-wrap: wrap;
+/* ItemListContainer*/
+.titleProductos {
+  background-color: rgb(26, 19, 2);
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 25px;
 }
 
-.styledCard{
-    width: 240px;
-    height:380px;
-    display: flex;
-    align-items: center;
-    border: solid transparent !important;
-    background-color: rgb(194, 163, 97) !important;
-    &:hover{
-        background-color: #fcdda5 !important;
-    }
+.boxItemListContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  background-image: url("../../public/fondo1.1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2em;
+  flex-wrap: wrap;
 }
 
-.buttonDetalle{
-    background-color: #422c02 !important;
-    color: white !important;
-    &:hover{
-        color: #422c02 !important;
-        background-color: white !important;
-        border: solid #422c02 !important;
-        font-weight: 900 !important;
-     }
+.styledCard {
+  width: 240px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  border: solid transparent !important;
+  background-color: rgb(26, 19, 2) !important;
+  &:hover {
+    background-color: #af7a18 !important;
+  }
 }
 
-.containerImg{
-    border:solid white;
-    width: 220px;
-    height: 200px;
+.buttonDetalle {
+  background-color: #422c02 !important;
+  color: white !important;
+  &:hover {
+    color: #422c02 !important;
+    background-color: white !important;
+    border: solid #422c02 !important;
+    font-weight: 900 !important;
+  }
+}
+
+.containerImg {
+  border: solid white;
+  width: 220px;
+  height: 200px;
 }
 
 /* ItemDetail */
 
-.boxItemDetailContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-image: url("../../public/fondo2.jpg");
-    background-position: center;
-    background-size: cover;
+.boxItemDetailContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../public/fondo2.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.styledCardDetail{
-    width: 400px;
-    height:450px;
-    display: flex;
-    align-items: center;
-    border: solid transparent !important;
-    margin-top: 2em;
-    background-color: rgb(194, 163, 97) !important;
+.styledCardDetail {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  border: solid transparent !important;
+  margin-top: 1em;
+  background-color: rgb(26, 19, 2) !important;
 }
 
-.containerImgDetail{
-    border:solid white;
-    width: 350px;
-    height: 200px;
+.containerImgDetail {
+  border: solid white;
+  width: 350px;
+  height: 230px;
 }
 
 /* Estilos de la pagDefault del carrito */
-.boxPagDefault{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh;
-    background-image: url("../../public/fondo2.jpg");
-    background-position: start;
-    background-size: cover;
+.boxPagDefault {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../public/fondo2.jpg");
+  background-position: start;
+  background-size: cover;
 }
 
-.titlePagDefault{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    font-weight: 900;
+.titlePagDefault {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+  color: #422c02;
+}
+
+.buttonPageDefault {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 40px;
+  margin-left: 42%;
+  margin-top: 3em;
+  border-radius: 1em;
+  background-color: #422c02;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  &:hover {
     color: #422c02;
-}
-
-.buttonPageDefault{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 40px;
-    margin-left: 42%;
-    margin-top: 3em;
-    border-radius: 1em;
-    background-color: #422c02 ;
-    color: white;
-    font-weight:700;
-    font-size: 20px;
-    &:hover{
-       color: #422c02;
-       background-color: white;
-       font-weight: 900;
-    }
+    background-color: white;
+    font-weight: 900;
+  }
 }
 
 /* Estilos carrito con productos */
-.boxPagCart{ 
-    width: 100%;
-    min-height: 82vh;
-    background-image: url("../../public/fondo2.jpg");
-    background-position: start;
-    background-size: cover;
-    display: flex;
-    align-items: start;
+.boxPagCart {
+  width: 100%;
+  min-height: 82vh;
+  background-image: url("../../public/fondo2.jpg");
+  background-position: start;
+  background-size: cover;
+  display: flex;
+  align-items: start;
 }
 
-.containerProducts{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.containerProducts {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.itemProduct{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5em;
-    padding: 0.5em;
-    background-color: #fcdda5;
-    margin: 1em 1em 0em 1em;
-    border-radius: 0.5em;
+.itemProduct {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5em;
+  padding: 0.5em;
+  background-color: #fcdda5;
+  margin: 1em 1em 0em 1em;
+  border-radius: 0.5em;
 }
 
-li{
-    font-size: 18px;
-    font-weight: 600;
-    list-style:none;
+li {
+  font-size: 18px;
+  font-weight: 600;
+  list-style: none;
 }
 
-.buttonTacho{
-    background-color: transparent !important;
-    width: 65px;
-    height: 35px !important;
+.buttonTacho {
+  background-color: transparent !important;
+  width: 65px;
+  height: 35px !important;
 }
 
-.containerGeneral{
-   background-color: white;
-    height: auto;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
-    margin-left: 60px;
-    border-radius: 1em;
+.containerGeneral {
+  background-color: transparent;
+  height: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: 60px;
+  border-radius: 1em;
+  border: solid #422c02;
 }
 
-.totalCart{
-    background-color: rgb(161, 20, 20);
-    width: 80%;
-    margin: 1em 1em 0em 1em;
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 0.5em;
+.totalCart {
+  background-color: rgb(161, 20, 20);
+  width: 80%;
+  margin: 1em 1em 0em 1em;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.5em;
 }
 
-.containerBotones{
-    width: 80%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2em;    
+.containerBotones {
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
 }
 
-.buttonInf{
-    background-color: #422c02 !important;
-    color: white !important;
-    &:hover{
-        color: #422c02 !important;
-        background-color: white !important;
-        border: solid #422c02 !important;
-        font-weight: 900 !important;
-     }
+.buttonInf {
+  background-color: #422c02 !important;
+  color: white !important;
+  &:hover {
+    color: #422c02 !important;
+    background-color: white !important;
+    border: solid #422c02 !important;
+    font-weight: 900 !important;
+  }
 }
 
 /* Footer */
 
-.containerFooter{
-    width: 100%;
-    height:120px;
-    background-color: rgb(194, 163, 97);
-    color: white;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: solid white 6px;
+.containerFooter {
+  width: 100%;
+  height: 120px;
+  background-image: url("../../public/granos.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: solid 6px rgb(26, 19, 2);
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.contactos{
-    color: black;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
+.contactos {
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
-.iconsFooter{
-    margin-right: 0.5em;
+.iconsFooter {
+  margin-right: 0.5em;
 }
 
 /* Formulario */
 
-.containerForm{
-    width: 60%;
-    border: solid #422c02;
-    border-radius: 1em;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    margin-left: 20%;
-    
+.containerForm {
+  width: 60%;
+  border: solid rgb(26, 19, 2);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-left: 5%;
+  margin-top: 50px;
 }
-.titleForm{
-    width: 100%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    color: #422c02;
+.titleForm {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(26, 19, 2);
 }
 
-.buttonEnviar{
-    width: 30%;
-    margin: 1em;
-    margin-left: 35%;
-    background-color: #422c02 !important;
-    color: white !important;
-    &:hover{
-        color: #422c02 !important;
-        background-color: white !important;
-        border: solid #422c02 !important;
-        font-weight: 900 !important;
+.buttonEnviar {
+  width: 30%;
+  margin: 1em;
+  margin-left: 35%;
+  background-color: #422c02 !important;
+  color: white !important;
+  &:hover {
+    color: #422c02 !important;
+    background-color: white !important;
+    border: solid #422c02 !important;
+    font-weight: 900 !important;
+  }
 }
+
+.buttonInicio {
+  width: 15%;
+  height: 40px;
+  margin-left: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  background-color: #422c02;
+  color: white;
+  font-weight: 600;
+  &:hover {
+    color: #422c02;
+    background-color: white;
+    border: solid #422c02;
+    font-weight: 900;
+  }
+}
+
+.parrafoOrden {
+  color: rgb(26, 19, 2);
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.numeroOrden {
+  font-size: 20px;
+  color: rgb(161, 20, 20);
+  font-weight: 900;
+  text-align: center;
 }
