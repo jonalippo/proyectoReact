@@ -15,7 +15,7 @@ Este proyecto fue construido completamente con:
 - React Js (Libreria para interfaces de usuario web y nativas)
 - NodJS (Sirve para hacer instalaciones de las librerias, renderizar el proyecto, engtre otros, mediante el comando npm)
 - Chakra UI (Libreria para crear componentes estilizados)
-- Firease (Base de datos No relacional alojada en la nube que te permite almacenar y sincronizar datos entre con los usuarios en tiempo real)
+- Firebase (Base de datos No relacional alojada en la nube que te permite almacenar y sincronizar datos entre con los usuarios en tiempo real)
 
 ## Instalación.
 - Clonar este proyecto: https://github.com/jonalippo/proyectoReact.git
