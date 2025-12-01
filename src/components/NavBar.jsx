@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Menu,
   MenuButton,
@@ -7,23 +7,48 @@ import {
   IconButton,
   Flex,
   Box,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
 } from "@chakra-ui/react";
 import CartWidget from "./CartWidget";
 import "./Styles.css";
 import { Link } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
+import { app } from "../firebase";
+
+const auth = getAuth(app);
 
 const NavBar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [modalMessage, setModalMessage] = useState("");
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      setModalMessage("Sesión cerrada correctamente ✅");
+      onOpen();
+    } catch (error) {
+      setModalMessage("Error al cerrar sesión: " + error.message);
+      onOpen();
+    }
+  };
+
   return (
     <Flex className="navbarStyled">
-      <Box className="boxImg">
-        <Link to={"/home"}>
+      
+        <Link to={"/"}>
           <img
             src="../../public/logoBlanco.png"
             alt="coffee"
             className="ImgLogo"
           />
         </Link>
-      </Box>
 
       <Box className="containerButtons">
         <Box>
@@ -93,9 +118,28 @@ const NavBar = () => {
         </Box>
       </Box>
 
-      <Box marginRight={"1em"}>
+      <Box className="containerCartLogin">
+      <Box>
+        <Link to={"/login"} as={IconButton}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+          <path fill="#ffffff" d="M12 21v-2h7V5h-7V3h7q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-2-4l-1.375-1.45l2.55-2.55H3v-2h8.175l-2.55-2.55L10 7l5 5z"/></svg>
+        </Link>
+      </Box>
         <CartWidget />
       </Box>
+
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Estado de sesión</ModalHeader>
+          <ModalBody>{modalMessage}</ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" onClick={onClose}>
+              Cerrar
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Flex>
   );
 };
